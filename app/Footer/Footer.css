@@ -1,0 +1,15 @@
+.footer {
+    grid-column: 1 / 13;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerContainer {
+    background-color: var(--color-black);
+    color: var(--color-red);
+    padding: 2rem 3rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}

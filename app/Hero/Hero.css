@@ -1,0 +1,45 @@
+.hero {
+    grid-column: 1 / 13;
+    min-height: 20rem;
+    height: 95vh;
+    background-color: white;
+    background-image: url("https://images5.alphacoders.com/128/thumb-1920-1280339.jpg");
+    /* background-image: url("../assets/IMG-5816.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 575.98px) {
+    /* Your CSS rules for mobile devices */
+
+    .hero {
+        background-color: blue;
+    }
+}
+
+/* Tablets and small desktop screens */
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+    /* Your CSS rules for tablets and small desktop screens */
+}
+
+/* Medium desktop screens */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your CSS rules for medium desktop screens */
+}
+
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+    /* Your CSS rules for large desktop screens */
+}

@@ -1,0 +1,78 @@
+.HomeCardsGrid {
+    grid-column: 1/ 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.HomeCardsContainer {
+    grid-column: 2 / 12;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.cardImage {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    padding: 12rem 0rem;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cardTextContainer {
+    grid-column: 4 / 7;
+    color: var(--color-white);
+    display: grid;
+    grid-template-rows: auto 1fr 2rem;
+    padding: 0rem 1rem;
+}
+
+.cardTextTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cardTextPara {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cardTextDirector {
+    font-size: 1.2rem;
+    align-self: self-end;
+    text-align: right;
+}
+
+
+
+
+/* Mobile devices */
+@media only screen and (max-width: 575.98px) {
+    /* Your CSS rules for mobile devices */
+
+}
+
+/* Tablets and small desktop screens */
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+    /* Your CSS rules for tablets and small desktop screens */
+}
+
+/* Medium desktop screens */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your CSS rules for medium desktop screens */
+}
+
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+    /* Your CSS rules for large desktop screens */
+}

@@ -1,0 +1,26 @@
+.navbarMain {
+    grid-column: 1 / 13;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbarContainer {
+    padding: 2rem 3rem;
+    backdrop-filter: blur(15px);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbarLinks a {
+    color: var(--color-red);
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.navbarLinks a:visited {
+    color: var(--color-red);
+
+}
