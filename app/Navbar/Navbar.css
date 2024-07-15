@@ -2,25 +2,75 @@
     grid-column: 1 / 13;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 .navbarContainer {
     padding: 2rem 3rem;
-    backdrop-filter: blur(15px);
-    color: white;
-    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbarLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Dark text for contrast */
+}
+
+.navbarToggle {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+}
+
+.navbarLinks {
+    display: flex;
+    gap: 1rem;
+    /* Space between links */
 }
 
 .navbarLinks a {
-    color: var(--color-red);
     text-decoration: none;
-    margin-left: 2rem;
+    color: #ffffff;
+    /* Matching the logo color */
+    position: relative;
 }
 
-.navbarLinks a:visited {
-    color: var(--color-red);
+.navbarLinks a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff0000;
+    /* Highlight color */
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
 
+.navbarLinks a:hover::after,
+.navbarLinks a:focus::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .navbarToggle {
+        display: block;
+        /* Show toggle in mobile */
+    }
+
+    .navbarLinks {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        /* Hide links initially */
+    }
+
+    .navbarLinks.active {
+        display: flex;
+        /* Show when active */
+    }
 }

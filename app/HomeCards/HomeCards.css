@@ -6,15 +6,25 @@
 
 .HomeCardsContainer {
     grid-column: 2 / 12;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 1rem;
     margin-top: 2rem;
 }
 
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    margin: 2rem 0rem;
+    padding: 2rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cardContainer.isVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .cardImage {
@@ -23,7 +33,7 @@
     justify-content: center;
     padding: 12rem 0rem;
     border-radius: 1rem;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -33,7 +43,7 @@
     color: var(--color-white);
     display: grid;
     grid-template-rows: auto 1fr 2rem;
-    padding: 0rem 1rem;
+    padding: 0rem 2rem;
 }
 
 .cardTextTitle {
@@ -49,7 +59,6 @@
 
 .cardTextDirector {
     font-size: 1.2rem;
-    align-self: self-end;
     text-align: right;
 }
 
@@ -58,13 +67,30 @@
 
 /* Mobile devices */
 @media only screen and (max-width: 575.98px) {
+
     /* Your CSS rules for mobile devices */
+    .cardImage {
+        grid-column: 1 / 7;
+        padding: 8rem 0rem;
+    }
+
+    .cardTextContainer {
+        grid-column: 1 / 7;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
 
 }
 
 /* Tablets and small desktop screens */
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
     /* Your CSS rules for tablets and small desktop screens */
+
+    .cardImage {
+        background-position: left;
+
+    }
+
 }
 
 /* Medium desktop screens */
